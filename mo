@@ -33,9 +33,8 @@ title.Text = "Blox Fruits Auto Farm"
 title.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text color
 title.TextSize = 24
 title.Font = Enum.Font.SourceSansBold
-title.TextStrokeTransparency = 0.2 -- Black outline transparency (darker outline)
+title.TextStrokeTransparency = 0.4 -- Black outline transparency
 title.TextStrokeColor3 = Color3.fromRGB(0, 0, 0) -- Black outline
-title.TextStrokeThickness = 4 -- Bigger outline thickness
 title.BackgroundTransparency = 1
 title.Parent = frame
 
@@ -69,9 +68,8 @@ welcomeText.Text = "Welcome To Blox Zilla AutoFarm Script..."
 welcomeText.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text color
 welcomeText.TextSize = 18
 welcomeText.Font = Enum.Font.SourceSansBold
-welcomeText.TextStrokeTransparency = 0.2 -- Black outline transparency (darker outline)
+welcomeText.TextStrokeTransparency = 0.4 -- Black outline transparency
 welcomeText.TextStrokeColor3 = Color3.fromRGB(0, 0, 0) -- Black outline
-welcomeText.TextStrokeThickness = 4 -- Bigger outline thickness
 welcomeText.BackgroundTransparency = 1
 welcomeText.Parent = textBoxBackground
 
@@ -83,9 +81,8 @@ button.Text = "Activate"
 button.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text
 button.TextSize = 24
 button.Font = Enum.Font.SourceSansBold
-button.TextStrokeTransparency = 0.2 -- Black outline transparency (darker outline)
+button.TextStrokeTransparency = 0.4 -- Black outline transparency
 button.TextStrokeColor3 = Color3.fromRGB(0, 0, 0) -- Black outline
-button.TextStrokeThickness = 4 -- Bigger outline thickness
 button.BackgroundColor3 = Color3.fromRGB(0, 255, 255) -- Cyan color for button
 button.BackgroundTransparency = 0 -- Opaque background
 button.BorderSizePixel = 0 -- No border
@@ -101,57 +98,31 @@ button.MouseButton1Click:Connect(function()
     print("Activate Button Clicked!")
 end)
 
--- Add the [bulb emoji] text below the button with color-changing effect
+-- Add the [bulb emoji] text below the button
 local activateText = Instance.new("TextLabel")
 activateText.Size = UDim2.new(1, 0, 0.1, 0)
 activateText.Position = UDim2.new(0, 0, 0.75, 0)
 activateText.Text = "💡 Activate The Script To Start Farming"
-activateText.TextColor3 = Color3.fromRGB(255, 255, 0) -- Bright yellow text (initial)
+activateText.TextColor3 = Color3.fromRGB(255, 255, 0) -- Bright yellow text
 activateText.TextSize = 18
 activateText.Font = Enum.Font.SourceSansBold
-activateText.TextStrokeTransparency = 0.2 -- Black outline transparency (darker outline)
+activateText.TextStrokeTransparency = 0.4 -- Black outline transparency
 activateText.TextStrokeColor3 = Color3.fromRGB(0, 0, 0) -- Black outline
-activateText.TextStrokeThickness = 4 -- Bigger outline thickness
 activateText.BackgroundTransparency = 1
 activateText.Parent = frame
 
--- Add color-changing effect for the "Activate" text
-while true do
-    for i = 1, 0.5, -0.05 do
-        activateText.TextColor3 = Color3.fromHSV(60/360, 1, i) -- Transition from yellow to red
-        wait(0.1)
-    end
-    for i = 0.5, 1, 0.05 do
-        activateText.TextColor3 = Color3.fromHSV(60/360, 1, i) -- Transition back to bright yellow
-        wait(0.1)
-    end
-end
-
--- Create the [boom emoji] text after with color-changing effect
+-- Create the [boom emoji] text after
 local creatorText = Instance.new("TextLabel")
 creatorText.Size = UDim2.new(1, 0, 0.1, 0)
 creatorText.Position = UDim2.new(0, 0, 0.85, 0)
 creatorText.Text = "💥 Created By Blox Zilla"
-creatorText.TextColor3 = Color3.fromRGB(0, 255, 255) -- Cyan text color (initial)
+creatorText.TextColor3 = Color3.fromRGB(0, 255, 255) -- Cyan text color
 creatorText.TextSize = 18
 creatorText.Font = Enum.Font.SourceSansBold
-creatorText.TextStrokeTransparency = 0.2 -- Black outline transparency (darker outline)
+creatorText.TextStrokeTransparency = 0.4 -- Black outline transparency
 creatorText.TextStrokeColor3 = Color3.fromRGB(0, 0, 0) -- Black outline
-creatorText.TextStrokeThickness = 4 -- Bigger outline thickness
 creatorText.BackgroundTransparency = 1
 creatorText.Parent = frame
-
--- Add color-changing effect for the "Created By" text
-while true do
-    for i = 1, 0.5, -0.05 do
-        creatorText.TextColor3 = Color3.fromHSV(180/360, 1, i) -- Transition from bright cyan to less bright
-        wait(0.1)
-    end
-    for i = 0.5, 1, 0.05 do
-        creatorText.TextColor3 = Color3.fromHSV(180/360, 1, i) -- Back to bright cyan
-        wait(0.1)
-    end
-end
 
 -- Create a bright cyan effect for the UI stroke (bright cyan to less bright cyan)
 while true do
